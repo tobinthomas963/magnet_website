@@ -111,10 +111,12 @@
     }
 
     .btn {
+      display: inline-block;
       padding: 12px 20px;
       border-radius: 999px;
       border: none;
       font-weight: 600;
+      text-decoration: none;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -238,6 +240,21 @@
       box-shadow: 0 8px 22px rgba(10, 38, 46, 0.12);
     }
 
+    .timeline-item summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .timeline-item summary::-webkit-details-marker {
+      color: var(--teal);
+    }
+
+    .timeline-item p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
     .media-strip {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -286,6 +303,23 @@
       height: 180px;
       object-fit: cover;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .video-embed {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 14px;
+      margin-top: 12px;
+      display: block;
+    }
+
+    .thumb {
+      width: 100%;
+      border-radius: 14px;
+      margin-top: 12px;
+      display: block;
+      object-fit: cover;
     }
 
     footer {
@@ -346,9 +380,14 @@
           magnetic forces, field lines, and real-world applications using videos, demonstrations, and
           hands-on tasks.
         </p>
+        <p>
+          The modules highlight how magnets work at the particle level, how magnetic fields influence
+          everyday tools, and how electromagnetism powers motors, speakers, and simple classroom builds.
+          Each topic includes a short explanation, an observation activity, and a reflection task to build
+          scientific language and reasoning.
+        </p>
         <div class="cta">
-          <button class="btn primary">Start Learning</button>
-          <button class="btn secondary">Download Activity Sheet</button>
+          <a class="btn primary" href="#media">Explore Videos</a>
         </div>
       </div>
       <div class="hero-card">
@@ -371,19 +410,20 @@
         <div class="card">
           <h3>Magnetic Force + Poles</h3>
           <p>Like poles repel and unlike poles attract. We use compasses and filings to visualize the invisible force around a magnet.</p>
+          <p>Students also compare the strength of different magnets and record how distance changes the force. This builds a data table for later discussion.</p>
           <img src="Images/Metal_shavings_around_bar_magnet.jpg" alt="Iron filings show magnetic field lines">
         </div>
         <div class="card">
           <h3>Earth as a Giant Magnet</h3>
           <p>Earth’s magnetic field shields us and guides compasses. Students observe how the field aligns a compass needle.</p>
+          <p>We connect this to navigation and explain why the magnetic north pole is not the same as the geographic north pole.</p>
           <img src="Images/Earth.png" alt="Earth magnetic field illustration">
         </div>
         <div class="card">
           <h3>Electromagnets</h3>
           <p>Electric current can create magnetism. Students build a simple electromagnet using a battery, wire, and nail.</p>
-          <video controls>
-            <source src="Images/1221.mp4" type="video/mp4">
-          </video>
+          <p>We investigate how the number of coil turns and battery strength affect lifting power and record results.</p>
+          <img src="Images/Electro%20Magnet.jpeg" alt="Simple electromagnet setup">
         </div>
       </div>
     </section>
@@ -393,75 +433,68 @@
         <h2>Hands-On Activities</h2>
         <span class="pill">Active Learning</span>
       </div>
+      <p>
+        Each activity is designed for a 35–40 minute lesson with a quick demonstration, group work, and a short
+        reflection task. Learners observe, record, and explain their findings using diagrams and keywords.
+      </p>
       <div class="timeline">
-        <div class="timeline-item">
-          <strong>Activity 1:</strong> Sort classroom objects into magnetic and non-magnetic groups.
-        </div>
-        <div class="timeline-item">
-          <strong>Activity 2:</strong> Create a temporary magnet by stroking an iron nail in one direction.
-        </div>
-        <div class="timeline-item">
-          <strong>Activity 3:</strong> Map field lines using iron filings sprinkled on paper above a bar magnet.
-        </div>
-        <div class="timeline-item">
-          <strong>Activity 4:</strong> Build an electromagnet and test how coil turns change strength.
-        </div>
+        <details class="timeline-item">
+          <summary>Activity 1: Sort magnetic and non-magnetic objects</summary>
+          <p>Students test items like coins, clips, and plastic to classify them, then discuss why some materials respond to magnets.</p>
+        </details>
+        <details class="timeline-item">
+          <summary>Activity 2: Create a temporary magnet</summary>
+          <p>Using an iron nail and a bar magnet, learners stroke in one direction and check if the nail attracts paper clips.</p>
+        </details>
+        <details class="timeline-item">
+          <summary>Activity 3: Map field lines</summary>
+          <p>Iron filings are sprinkled on paper over a magnet to reveal field patterns; students sketch the curves and directions.</p>
+        </details>
+        <details class="timeline-item">
+          <summary>Activity 4: Build an electromagnet</summary>
+          <p>Students wrap wire around a nail, connect a battery, and compare how coil turns change lifting power.</p>
+        </details>
       </div>
     </section>
 
     <section id="media">
       <div class="section-title">
-        <h2>Video + GIF Lab</h2>
+        <h2>Video Resources</h2>
         <span class="pill">See It in Motion</span>
       </div>
       <div class="grid">
         <div class="card">
           <h3>Magnetic Field Demo</h3>
           <p>Observe how field lines form with iron filings and how a compass responds.</p>
-          <video controls poster="Images/1111.jpeg">
-            <source src="Images/1222.mp4" type="video/mp4">
+          <video controls>
+            <source src="Videos/Magnetism.mp4" type="video/mp4">
           </video>
         </div>
         <div class="card">
-          <h3>Quick Concept GIF</h3>
-          <p>A short animation helps learners remember the push-pull nature of poles.</p>
-          <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Magnet poles animation">
+          <h3>Magnetism Basics</h3>
+          <p>Watch a guided introduction that reviews poles, attraction, and repulsion.</p>
+          <img class="thumb" src="https://img.youtube.com/vi/GBfUuntrczo/hqdefault.jpg" alt="Magnetism basics video thumbnail">
+          <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/GBfUuntrczo?rel=0" title="Magnetism basics demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+          <h3>Field Lines in Action</h3>
+          <p>See magnetic field patterns and how a compass aligns to them.</p>
+          <img class="thumb" src="https://img.youtube.com/vi/Aq341z4i1tI/hqdefault.jpg" alt="Magnetic field lines video thumbnail">
+          <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/Aq341z4i1tI?rel=0" title="Magnetic field lines in action" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="card">
+          <h3>Electromagnets Explained</h3>
+          <p>Connect electricity and magnetism with real experiments.</p>
+          <img class="thumb" src="https://img.youtube.com/vi/tHIchO1pbFA/hqdefault.jpg" alt="Electromagnets video thumbnail">
+          <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/tHIchO1pbFA?rel=0" title="Electromagnets explained" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="card">
           <h3>Earth’s Magnetic Field</h3>
           <p>Why compasses point north and how field lines wrap around the planet.</p>
-          <video controls poster="Images/earth1.jpeg">
-            <source src="Videos/Magnetism.mp4" type="video/mp4">
+          <video controls>
+            <source src="Images/earth%20magnetic%20filed.mp4" type="video/mp4">
           </video>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Learning Gallery</h2>
-        <span class="pill">Classroom Moments</span>
-      </div>
-      <div class="gallery">
-        <img src="Images/1111.jpeg" alt="Students exploring magnets">
-        <img src="Images/earth1.jpeg" alt="Earth magnetism visual">
-        <img src="Images/earh.jpeg" alt="Magnetic poles diagram">
-        <img src="Images/magnetism.jpg" alt="Magnets and filings">
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Extension + Resources</h2>
-        <span class="pill">Explore More</span>
-      </div>
-      <div class="highlight">
-        <p>Students deepen learning by connecting magnetism with real-world technology like MRI, speakers, and electric motors.</p>
-        <ul class="resource-list">
-          <li>National High Magnetic Field Laboratory — classroom demos</li>
-          <li>NASA magnetosphere visuals and stories</li>
-          <li>Simple DIY electromagnet guide for students</li>
-        </ul>
       </div>
     </section>
 
@@ -473,7 +506,7 @@
       <div class="card">
         <p><strong>Teacher Name:</strong> Tobin Thomas</p>
         <p><strong>Institution:</strong> Badhiriya B.Ed Training College</p>
-        <p><strong>Email:</strong> your-email@example.com</p>
+        <p><strong>Email:</strong> tobinthomas963@gmail.com</p>
       </div>
     </section>
   </main>
